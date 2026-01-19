@@ -1,0 +1,51 @@
+{
+  "id": "5067233",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1710319",
+      "name": "创建考试",
+      "font_class": "chuangjiankaoshi",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "5861073",
+      "name": "考务管理-考试管理",
+      "font_class": "kaowuguanli-kaoshiguanli",
+      "unicode": "e7ba",
+      "unicode_decimal": 59322
+    },
+    {
+      "icon_id": "6557043",
+      "name": "告警策略-测试",
+      "font_class": "gaojingcelve-ceshi",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "17676047",
+      "name": "题库管理",
+      "font_class": "tikuguanli",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "24520794",
+      "name": "个人信息",
+      "font_class": "gerenxinxi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "25028763",
+      "name": "创建试卷",
+      "font_class": "chuangjianshijuan",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    }
+  ]
+}
