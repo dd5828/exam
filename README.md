@@ -26,7 +26,7 @@
 
 3.启动管理后台的后端服务
 
-- 打开 "exam\exams\exams-service\src\main\resources\application.yml"  编辑你的数据库账户密码![image-20260119210718216](G:\springboot_project\exam\运行图片\image-20260119210718216.png)
+- 打开 "exam\exams\exams-service\src\main\resources\application.yml"  编辑你的数据库账户密码![image-20260119210718216](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119210718216.png)
 - 在idea中配置好maven并刷新下载对应依赖        （不会的可以直接搜索maven配置）
 - 在idea中选择直接运行即可
 
@@ -36,30 +36,30 @@
 
 可以看到自动生成的接口文档
 
-![image-20260119211539231](G:\springboot_project\exam\运行图片\image-20260119211539231.png)
+![image-20260119211539231](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119211539231.png)
 
-注意使用接口文档需要登录后保存token，刷新即可![image-20260119211754386](G:\springboot_project\exam\运行图片\image-20260119211754386.png)
+注意使用接口文档需要登录后保存token，刷新即可![image-20260119211754386](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119211754386.png)
 
-![image-20260119211902346](G:\springboot_project\exam\运行图片\image-20260119211902346.png)
+![image-20260119211902346](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119211902346.png)
 
 登录界面
 
-![image-20260119212149256](G:\springboot_project\exam\运行图片\image-20260119212149256.png)
+![image-20260119212149256](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212149256.png)
 
 管理员后台界面
 
-![image-20260119212308756](G:\springboot_project\exam\运行图片\image-20260119212308756.png)
+![image-20260119212308756](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212308756.png)
 
-![image-20260119212343115](G:\springboot_project\exam\运行图片\image-20260119212343115.png)
+![image-20260119212343115](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212343115.png)
 
-![image-20260119212409679](G:\springboot_project\exam\运行图片\image-20260119212409679.png)
+![image-20260119212409679](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212409679.png)
 
-![image-20260119212450482](G:\springboot_project\exam\运行图片\image-20260119212450482.png)
+![image-20260119212450482](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212450482.png)
 
-![image-20260119212519825](G:\springboot_project\exam\运行图片\image-20260119212519825.png)
+![image-20260119212519825](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212519825.png)
 
-![image-20260119212544373](G:\springboot_project\exam\运行图片\image-20260119212544373.png)
+![image-20260119212544373](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212544373.png)
 
-![image-20260119212617114](G:\springboot_project\exam\运行图片\image-20260119212617114.png)
+![image-20260119212617114](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212617114.png)
 
-![image-20260119212643835](G:\springboot_project\exam\运行图片\image-20260119212643835.png)
+![image-20260119212643835](https://github.com/dd5828/exam/blob/main/运行图片/image-20260119212643835.png)
