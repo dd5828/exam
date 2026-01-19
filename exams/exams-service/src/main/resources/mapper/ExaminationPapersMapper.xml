@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.examsservice.mapper.ExaminationPapersMapper">
+
+
+    <insert id="batchInsert" parameterType="com.exam.dto.AddTestPaperQuestionDTO">
+        INSERT INTO paper_questions (paper_id, question_id) VALUES
+        <foreach collection="ids" item="questionId" index="index" separator=",">
+            (#{paperId}, #{questionId})
+        </foreach>
+    </insert>
+    <update id="updateTypeScore">
+        update paper_questions
+        <set>type_score=#{average}</set>
+        <where> paper_id=#{paperId} and question_id in(select id from questions where question_type=#{questionType})</where>
+    </update>
+
+    <select id="countQuestionTypesByPaperId" resultType="com.exam.vo.QuestionTypeCountVO">
+        SELECT s.question_type, p.type_score, COUNT(s.question_type) AS count
+        FROM `questions` s
+            LEFT JOIN paper_questions p ON s.id = p.question_id
+        WHERE p.paper_id = #{paperId}
+        GROUP BY s.question_type, p.type_score;
+    </select>
+    <select id="pageQuery" resultType="com.exam.vo.ExamintionPapersPageQueryVO"
+            parameterType="com.exam.dto.ExamintionPapersPageQueryDTO">
+        select e.*,c.type_name as categoryName,u1.name as createUser,u2.name as updateUser
+        from examination_papers e
+        LEFT JOIN category c ON c.id=e.category_id
+        LEFT JOIN user u1 on u1.id=e.create_user_id
+        LEFT JOIN user u2 on u2.id=e.update_user_id
+        <where>
+            <if test="paperTitle!=null">
+                and e.paper_title like concat('%',#{paperTitle},'%')
+            </if>
+            <if test="status!=null">
+                and e.status=#{status}
+            </if>
+        </where>
+
+    </select>
+    <select id="selectExistingQuestionIds" resultType="java.lang.Long">
+        SELECT question_id
+        FROM paper_questions
+        WHERE paper_id = #{paperId}
+        AND question_id IN
+        <foreach collection="questionIds" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+</mapper>

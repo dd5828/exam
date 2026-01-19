@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.examsservice.mapper.StudentInfoMapper">
+
+    <update id="updateStudent">
+        UPDATE student_info
+        <set>
+            <if test="studentName != null and studentName != ''">student_name = #{studentName},</if>
+            <if test="studentNumber != null and studentNumber != ''">student_number = #{studentNumber},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="classId != null and classId != ''">class_id = #{classId},</if>
+
+        </set>
+        WHERE student_id = #{studentId}
+
+    </update>
+
+    <select id="pageQuery" resultType="com.exam.entity.StudentInfo" parameterType="com.exam.dto.StudentsPageQueryDTO">
+        SELECT *
+        FROM student_info
+        <where>
+            <if test="studentName != null and studentName != ''">
+                AND student_name LIKE CONCAT('%', #{studentName}, '%')
+            </if>
+            <if test="studentNumber != null and studentNumber != ''">
+                AND student_number LIKE CONCAT('%', #{studentNumber}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>
